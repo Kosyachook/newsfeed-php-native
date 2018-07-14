@@ -1,9 +1,9 @@
 <?php
 return array(
 
-	'news/([0-9]+)' => 'news/view/$1',
+	'home/([0-9]+)' => 'home/view/$1',
 	'news' => 'news/index', 
-	'home' => 'home/index'
+	'home' => 'home/index',
 
 	);
 	
