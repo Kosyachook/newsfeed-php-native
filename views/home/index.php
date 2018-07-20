@@ -13,12 +13,12 @@
     <header>
         <!--<div class="container-head">-->
             <div class="logo-holder">
-                <a href="index.html"><img class="graphiclogo" src="public/images/LifeStyle.png" alt="Logo"></a>
+                <a href="/home"><img class="graphiclogo" src="public/images/LifeStyle.png" alt="Logo"></a>
             </div>
             <div class="nav-holder">
                 <ul class="nav justify-content-lg-center">
                     <li class="nav-item">
-                      <a class="nav-link active" href="index.html">Home</a>
+                      <a class="nav-link active" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Blog</a>
@@ -43,10 +43,12 @@
                 <div class="col-8">
                     <div class="advantages">
                         <div class="advantages__container">
-                            <?php foreach($articlesList as $articleItem):?>
+                            <?php foreach($articlesSample as $articleItem):?>
                                 <div class="advantages__item">
-                                    <h4>Lorem ipsum</h4>
-                                    <p>Lorem ipsum dolor sit amet, sumo appareat ex est, eum et graece civibus consectetuer. Ut rebum abhorreant per. Vis no mollis officiis disputando, soluta virtute eu sit, esse omnes impetus ut ius. Accusata invenire cu has, id nisl causae oporteat sed. Affert mediocritatem at ius, stet eros illud vel cu.</p>
+                                    <h3><a href='/home/<?php echo $articleItem["id"]; ?>'><?php echo $articleItem["title"]; ?></a></h3>
+                                    <div>
+                                        <p><?php echo $articleItem["short_content"]; ?></p>
+                                    </div>
                                 </div>
                             <?php endforeach;?>
                         </div>

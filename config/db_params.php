@@ -3,6 +3,6 @@
 return array(
 			'host' => 'localhost',
 			'dbname' => 'php_base',
-			'user' => 'root',
-			'password' => 'kvazimir707',
+			'user' => 'media_hub',
+			'password' => 'shapiroda',
 );

@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Newsfeed Lite</title>
-    <link rel="stylesheet" href="public/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
 </head>
 <body>
     <header>
         <!--<div class="container-head">-->
             <div class="logo-holder">
-                <a href="index.html"><img class="graphiclogo" src="images/LifeStyle.png" alt="Logo"></a>
+                <a href="index.html"><img class="graphiclogo" src="/public/images/LifeStyle.png" alt="Logo"></a>
             </div>
             <div class="nav-holder">
                 <ul class="nav justify-content-lg-center">
@@ -42,8 +42,8 @@
             <div class="row">
                 <div class="col-8">
                     <div class="article">
-						<h4>Lorem ipsum</h4>
-                        <p>Lorem ipsum dolor sit amet, sumo appareat ex est, eum et graece civibus consectetuer. Ut rebum abhorreant per. Vis no mollis officiis disputando, soluta virtute eu sit, esse omnes impetus ut ius. Accusata invenire cu has, id nisl causae oporteat sed. Affert mediocritatem at ius, stet eros illud vel cu.</p>
+						<h4><?php echo $articleItem['title']; ?></h4>
+                        <p><?php echo $articleItem['content']; ?></p>
                     </div>
                 </div>
                 <div class="col-4">
@@ -90,8 +90,8 @@
             </div>
         </div>
     </footer>
-    <script src="public/js/jquery-3.2.1.slim.js"></script>
-    <script src="public/js/popper.min.js"></script>
-    <script src="public/js/bootstrap.min.js"></script>
+    <script src="/public/js/jquery-3.2.1.slim.js"></script>
+    <script src="/public/js/popper.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
 </body>
 </html>
