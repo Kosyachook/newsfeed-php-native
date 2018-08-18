@@ -7,16 +7,14 @@ class HomeController
 {
 		public function actionIndex()
 		{
-			$articlesSample = array();
-			$articlesSample = News::getNewsList();
-
+			$articlesSample = Articles::getPostsListByCount(6);
 			//var_dump($articlesSample);
 		    require_once(ROOT . '/views/home/index.php');
 			return true;
 		}
 		public function actionView($id){
 			if($id){
-				$articleItem = News::getNewsItemByID($id);
+				$articleItem = Articles::getPostById($id);
 				require_once(ROOT . '/views/home/view.php');
 			}
 			return true;
