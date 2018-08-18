@@ -12,11 +12,8 @@ class HomeController
 		    require_once(ROOT . '/views/home/index.php');
 			return true;
 		}
-		public function actionView($id){
-			if($id){
-				$articleItem = Articles::getPostById($id);
-				require_once(ROOT . '/views/home/view.php');
-			}
+		public function actionAbout(){
+			echo '<h1>Action About</h1>';
 			return true;
 		}
 

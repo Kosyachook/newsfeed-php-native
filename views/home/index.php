@@ -8,7 +8,7 @@
                         <div class="advantages__container">
                             <?php foreach($articlesSample as $articleItem):?>
                                 <div class="advantages__item">
-                                    <h3><a href='/news/<?php echo $articleItem["id"]; ?>'><?php echo $articleItem["title"]; ?></a></h3>
+                                    <h4><a href='/news/<?php echo $articleItem["id"]; ?>'><?php echo $articleItem["title"]; ?></a></h4>
                                     <div>
                                         <p><?php echo $articleItem["short_content"]; ?></p>
                                     </div>

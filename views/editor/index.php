@@ -3,31 +3,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <div class="editor_insert">
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" class="form-control" id="title">
-                            </div>
-                            <div class="form-group">
-                                <label for="author_name">Author</label>
-                                <input type="text" class="form-control" id="authorName">
-                            </div>
-                            <div class="form-group">
-                                <label for="comment">Article Short Content</label>
-                                <textarea class="form-control" rows="5" id="shortContent"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="comment">Article Content</label>
-                                <textarea class="form-control" rows="25" id="content"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Insert</button>
-                        </form>
+                    <div class="editor_overview">
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                            </tr>
+                            <?php foreach($articlesList as $articleItem): ?>
+                            <tr>
+                                <td><?php echo $articleItem['id']; ?></td>
+                                <td><?php echo $articleItem['title']; ?></td>
+                                <td><?php echo $articleItem['author_name']; ?></td>
+                                <td><a href="editup/<?php echo $articleItem['id']; ?>">Edit</a></td>
+                                <td><a href="editdell/<?php echo $articleItem['id']; ?>">Delete</a></td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </table>
+                        
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="editor_preview">
+                    <?php if(isset($totalArticles)): ?>
                         <h2>Total <?php echo $totalArticles; ?> U</h2>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
