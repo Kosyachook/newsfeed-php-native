@@ -1,16 +1,19 @@
 <?php
 
-class EditorController{
+class EditorController extends ChiefEditor{
     public function actionIndex(){
+        self::checkPermissions();
         //echo 'Hello Editor';
         $totalArticles = Articles::getCount();
-        $articlesList = Articles::getPostsListByCount($totalArticles);
+        $articlesList = Articles::getPostsListByCount((int)$totalArticles);
         require_once(ROOT . '/views/editor/index.php');
         
         return true;
     }
     public function actionAdd(){
-        echo '<h1>Form Insert.</h1>';
+        //echo '<h1>Form Insert.</h1>';
+        self::checkPermissions();
+
         $totalArticles = Articles::getCount();
         if(isset($_POST['submit'])){
             //echo '<h1>Form submited.</h1>';
@@ -32,6 +35,7 @@ class EditorController{
         return true;
     }
     public function actionDelete($id){
+        self::checkPermissions();
         //echo '<h1>DELETING</h1>';
         //
         if(isset($_POST['submit_yes'])){
@@ -45,6 +49,7 @@ class EditorController{
         return true;
     }
     public function actionUpdate($id){
+        self::checkPermissions();
         //echo '<h1>EDITING</h1>';
         $isue = Articles::getPostById($id);
 
